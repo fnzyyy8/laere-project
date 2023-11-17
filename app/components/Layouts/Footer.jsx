@@ -1,4 +1,4 @@
-import style from "./layout.module.css";
+import style from "./layout.module.scss";
 export default function Footer() {
   const year = new Date().getFullYear().toString();
   return (

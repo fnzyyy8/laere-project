@@ -1,0 +1,19 @@
+.navbar {
+  @apply w-screen flex justify-center items-center h-20 fixed mx-auto;
+  .nav {
+    @apply flex;
+  }
+  li {
+    @apply text-white mx-6;
+    & :hover {
+      @apply text-gray-600;
+    }
+  }
+}
+
+.footer {
+  @apply h-20 bg-secondary flex justify-center items-center border-t-2;
+  p {
+    @apply text-white;
+  }
+}

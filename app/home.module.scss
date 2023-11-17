@@ -2,6 +2,9 @@
   @apply bg-primary min-h-screen flex justify-center items-center;
   .content {
     @apply max-w-sm text-center my-4;
+    p {
+      @apply leading-snug;
+    }
   }
   .tagline {
     @apply flex flex-col justify-center items-center;
@@ -14,17 +17,23 @@
     @apply w-[80vw] text-center;
   }
   h1 {
-    @apply text-5xl;
+    @apply text-5xl my-2 leading-snug;
   }
   .container {
-    @apply mt-64;
+    @apply my-12;
   }
-
   button {
     @apply border-2 px-12 py-3 border-black rounded-md font-bold;
-
     &:hover {
       @apply border-secondary bg-black text-white;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .tentang_container {
+    h1 {
+      @apply text-2xl;
     }
   }
 }
