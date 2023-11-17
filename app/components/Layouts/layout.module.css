@@ -1,0 +1,27 @@
+.navbar {
+  @apply w-screen flex justify-center items-center h-20 fixed;
+}
+
+.navbar_nav {
+  @apply flex;
+}
+
+.navbar_nav li {
+  @apply mx-6;
+}
+
+.navbar_nav li a {
+  @apply p-3 text-white;
+}
+
+.underline {
+  @apply bg-white w-full;
+}
+
+.footer {
+  @apply h-20 bg-secondary flex justify-center items-center;
+}
+
+.footer p {
+  @apply text-white;
+}
