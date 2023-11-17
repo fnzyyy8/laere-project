@@ -6,7 +6,7 @@ export default function Header() {
             <ul className={style.navbar_nav}>
                 <li><Link href="/">Tentang</Link></li>
                 <li><Link href="/">Portofolio</Link></li>
-                <li><Link href="/">Terkonesi</Link></li>
+                <li><Link href="/">Terkoneksi</Link></li>
             </ul>
         </header>
     )
