@@ -1,0 +1,12 @@
+.notFound_container {
+  @apply max-w-lg flex flex-col justify-center items-center;
+  p {
+    @apply mt-6;
+    a {
+      @apply text-secondary;
+      &:hover {
+        @apply text-white;
+      }
+    }
+  }
+}

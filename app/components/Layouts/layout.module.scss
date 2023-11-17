@@ -1,13 +1,37 @@
 .navbar {
-  @apply w-screen flex justify-center items-center h-20 fixed mx-auto;
+  @apply w-full flex items-center h-20 fixed bg-navCol;
   .nav {
-    @apply flex;
+    @apply flex items-center mx-auto justify-between w-[92%];
   }
-  li {
-    @apply text-white mx-6;
-    & :hover {
-      @apply text-gray-600;
+  .nav_menu {
+    @apply flex;
+    li {
+      @apply text-white mx-6;
+      & :hover {
+        @apply text-secondary;
+      }
     }
+  }
+  .nav_dropdown_lang {
+    @apply flex items-center justify-center space-x-4 text-white right-12;
+  }
+  .nav_menu_lang {
+    @apply absolute top-20 bg-navCol shadow-lg;
+    li {
+      @apply py-6 px-12;
+    }
+  }
+
+  .nav_menuIcon {
+    @apply hidden;
+  }
+
+  .dropdown_lang {
+    @apply hidden;
+  }
+
+  .dropdown_menu_lang {
+    @apply hidden;
   }
 }
 
@@ -15,5 +39,47 @@
   @apply h-20 bg-secondary flex justify-center items-center border-t-2;
   p {
     @apply text-white;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .navbar {
+    .nav {
+      @apply flex items-center mx-auto justify-between w-[78%];
+    }
+    .nav_menu_open {
+      @apply text-white flex flex-col absolute left-0 w-screen top-20 bg-navCol items-center min-h-fit justify-center shadow-lg;
+      li {
+        @apply my-3;
+        & :hover {
+          @apply text-white cursor-pointer;
+        }
+      }
+    }
+    .nav_menu_close {
+      @apply hidden;
+    }
+
+    .nav_dropdown_lang {
+      @apply hidden;
+    }
+
+    .nav_menu_lang {
+      @apply hidden;
+    }
+
+    .nav_menuIcon {
+      @apply block text-white;
+    }
+    .dropdown_lang {
+      @apply block;
+    }
+
+    .dropdown_menu_lang_open {
+      @apply block flex;
+    }
+    .dropdown_menu_lang_close {
+      @apply hidden;
+    }
   }
 }

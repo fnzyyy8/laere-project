@@ -1,7 +1,7 @@
 import style from "../home.module.scss"
-export default function Hero() {
+export default function Hero(sectionName: any) {
     return (
-        <section className={style.hero_container}>
+        <section className={style.hero_container} id={sectionName}>
             <div className={style.content}>
                 <div className={style.tagline}>
                     <h1>Digitalisasi</h1>

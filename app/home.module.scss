@@ -30,6 +30,18 @@
   }
 }
 
+.porto_container {
+  @apply bg-primary min-h-screen flex justify-center items-center;
+}
+
+@media screen and (max-width: 768px) {
+  .tentang_container {
+    h1 {
+      @apply text-3xl;
+    }
+  }
+}
+
 @media screen and (max-width: 390px) {
   .tentang_container {
     h1 {

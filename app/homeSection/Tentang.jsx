@@ -1,8 +1,8 @@
 import style from "../home.module.scss";
 
-export default function Tentang() {
+export default function Tentang(sectionName) {
   return (
-    <section className={style.tentang_container}>
+    <section className={style.tentang_container} id={sectionName}>
       <div className={style.container}>
         <h1>
           Kami adalah perusahaan penyedia Desain Webstie dan pembuatan Aplikasi.
