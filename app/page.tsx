@@ -1,12 +1,12 @@
 import Hero from "./homeSection/Hero"
-import Tentang from "./homeSection/Tentang"
-import Portofolio from "./homeSection/Portofolio"
+import About from "./homeSection/About"
+import Products from "./homeSection/Products"
 export default function Home() {
   return (
-    <main>
+    <main className="main">
       <Hero sectionName="#hero" />
-      <Tentang sectionName="about" />
-      <Portofolio sectionName="portofolio" />
+      <About sectionName="about" />
+      <Products sectionName="portofolio" />
     </main>
   )
 }

@@ -1,51 +1,62 @@
+@mixin container_standard {
+  @apply pt-20 px-16;
+}
+
+@mixin gradientCol {
+  @apply bg-gradient-to-bl from-primary to-secondary;
+}
+
+@mixin margin_standard {
+  @apply mt-6;
+}
+
 .hero_container {
-  @apply bg-primary min-h-screen flex justify-center items-center;
-  .content {
-    @apply max-w-sm text-center my-4;
-    p {
-      @apply leading-snug;
+  .hero_content {
+    @apply max-w-5xl justify-center items-center my-4 p-6 bg-navCol rounded-2xl drop-shadow-xl min-w-[900px];
+    .tagline {
+      @apply max-w-lg;
+      h1 {
+        @apply text-6xl font-black leading-tight;
+        span {
+          @apply text-transparent bg-clip-text;
+          @include gradientCol();
+        }
+      }
     }
-  }
-  .tagline {
-    @apply flex flex-col justify-center items-center;
+    .text {
+      @include margin_standard();
+      p {
+        @apply leading-snug text-2xl text-white font-light;
+      }
+    }
+    .btn_connect {
+      @apply px-6 py-3 rounded-lg font-medium text-black  bg-gradient-to-bl from-primary to-secondary;
+      & :hover {
+        @apply text-white;
+      }
+      @include margin_standard();
+    }
   }
 }
 
-.tentang_container {
-  @apply bg-secondary flex flex-col justify-center items-center h-screen;
-  .container {
-    @apply w-[80vw] text-center;
+.about_container {
+  @include container_standard;
+  @apply bg-gradient-to-b from-primary to-secondary flex flex-col justify-start items-start h-screen;
+
+  .top_area {
+    @apply flex items-center justify-between w-full border-2 px-9 py-2 rounded-3xl;
   }
+
+  .content_area {
+    @apply mt-14 border-2 px-9 py-2 rounded-3xl;
+  }
+
   h1 {
-    @apply text-5xl my-2 leading-snug;
-  }
-  .container {
-    @apply my-12;
-  }
-  button {
-    @apply border-2 px-12 py-3 border-black rounded-md font-bold;
-    &:hover {
-      @apply border-secondary bg-black text-white;
-    }
+    @apply text-5xl my-2 leading-snug font-light;
   }
 }
 
-.porto_container {
+.product_container {
+  @include container_standard;
   @apply bg-primary min-h-screen flex justify-center items-center;
-}
-
-@media screen and (max-width: 768px) {
-  .tentang_container {
-    h1 {
-      @apply text-3xl;
-    }
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .tentang_container {
-    h1 {
-      @apply text-2xl;
-    }
-  }
 }
