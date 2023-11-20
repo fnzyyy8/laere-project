@@ -1,5 +1,5 @@
 @mixin container_standard {
-  @apply pt-20 px-16;
+  @apply pt-6 px-16;
 }
 
 @mixin gradientCol {
@@ -41,14 +41,29 @@
 
 .about_container {
   @include container_standard;
-  @apply bg-gradient-to-b from-primary to-secondary flex flex-col justify-start items-start h-screen;
+  @apply bg-gradient-to-b from-primary to-secondary flex flex-col h-screen;
 
   .top_area {
-    @apply flex items-center justify-between w-full border-2 px-9 py-2 rounded-3xl;
+    @apply flex items-center w-full justify-between py-2 mt-12 text-white;
+
+    a {
+      @apply text-white flex items-center;
+
+      p {
+        @apply pr-6;
+      }
+
+      &:hover {
+        @apply text-black;
+      }
+    }
   }
 
   .content_area {
-    @apply mt-14 border-2 px-9 py-2 rounded-3xl;
+    @apply rounded-3xl;
+    h1 {
+      @apply text-white mt-6 text-4xl leading-snug text-justify;
+    }
   }
 
   h1 {
@@ -58,5 +73,5 @@
 
 .product_container {
   @include container_standard;
-  @apply bg-primary min-h-screen flex justify-center items-center;
+  @apply bg-secondary w-screen h-screen;
 }

@@ -32,11 +32,11 @@ export default function Hero(sectionName: any) {
                     <div className={style.text}>
                         <p>
                             <span>
-                                Percayakan teknologi anda kepada kami
+                                Percayakan teknologi anda kepada kami, karena digitalisasi tanpa batas.
                             </span>
                         </p>
                     </div>
-                    <button className={style.btn_connect}>Hubungi kami</button>
+                    <button className={style.btn_connect}>Hubungi</button>
                 </div>
 
             </div>
